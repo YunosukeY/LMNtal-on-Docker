@@ -1,0 +1,31 @@
+UNYO-UNYO : The LMNtal Visualizer
+version 1.1.1 20100307
+
+includes:
+-[unyo.jar] The jar file of UNYO-UNYO (executable)
+-[unyo.bat] The bat file of UNYO-UNYO
+-[plugins] The directory for the Custom Reallocator function(*)
+ -[sample] This directory contains the sample programs (written in Java) for
+  the Custom Reallocator function. If you want to use these programs, move
+  java files (and class files) to "plugins" directory below.
+ -[autoreallo] This directory contains the programs (written in Java) for
+  the Custom Reallocator function. The programs in this, are applied to
+  a specific graph automatically. Never change the name of the program files
+  in this directory, but you can edit programs.
+-[lib] The library directory
+-[README] This file
+
+(*) If you want to use the Custom Reallocator function, you must let through the
+ PATH to Java, and be able to use java compiler. 
+
+How to use:
+1. If you need, install Java.
+2. Start "unyo.jar" or "unyo.bat" (click the file or input command)
+3. Choose "File > Open file" in the top menu bar, and select the program which
+ you want to open.
+4. Click "Go Ahead" button on the bottom-right panel, so that the program
+ proceed.
+
+-----------------
+http://www.ueda.info.waseda.ac.jp/lmntal/
+uedalab@ueda.info.waseda.ac.jp

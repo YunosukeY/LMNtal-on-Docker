@@ -1,0 +1,17 @@
+phi(L1, R1), fork{+L2, +R1},
+phi(L2, R2), fork{+L3, +R2},
+phi(L3, R3), fork{+L4, +R3},
+phi(L4, R4), fork{+L5, +R4},
+phi(L5, R5), fork{+L1, +R5}.
+
+%% 左のフォークを掴む
+phi(L, R), fork{+L, +X} :- 
+phi(u(L), R), fork{+L, +X, used}.
+
+%% 右のフォークを掴む
+phi(u(L), R), fork{+L, +X, used}, fork{+R, +Y} :-
+phi(u(L), u(R)), fork{+L, +X, used}, fork{+R, +Y, used}.
+
+%% フォークを置く
+fork{+X, +L, used}, phi(u(L), u(R)), fork{+R, +Y, used} :-
+fork{+X, +L}, phi(L, R), fork{+R, +Y}.

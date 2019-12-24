@@ -1,0 +1,5 @@
+//Please run with suffle mode.
+
+root(X,Y,Z), l(X),l(Y), l(Z).
+l(X) :- v(X, Y, Z, S), l(Z),l(Y),l(S).
+
