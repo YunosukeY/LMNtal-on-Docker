@@ -4,7 +4,7 @@ services:
     image: lmntal
     hostname: lmntal-host
     build: .
-    command: bash
+    command: java -jar LaViT/LaViT.jar
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
     environment:
